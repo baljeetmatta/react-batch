@@ -66,3 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.flex-class
+{
+  display:flex;
+  column-gap: 10px;
+}
+.active
+{
+  background-color:gray;
+  color:white;
+  padding:10px;
+}
