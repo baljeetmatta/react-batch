@@ -23,7 +23,8 @@ const Cform=()=>{
 
     return(
         <div>
-            <div>Name <input type="text" onChange={nameHanlder} value={name}/></div>
+            <div>Name <input type="text" 
+            onChange={nameHanlder} value={name}/></div>
             <div>City <input type="text"  onChange={cityHanlder} value={city}/></div>
             <div>Email <input type="text"  onChange={emailHanlder} value={email}/></div>
             <div><button onClick={clickHandler}>Save</button></div>

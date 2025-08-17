@@ -43,7 +43,7 @@
 // }
 
 // export default App
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./components/site/Home";
 
 import "./index.css"
@@ -51,6 +51,9 @@ import Contact from "./components/site/Contact";
 import About from "./components/site/About";
 import Navbar from "./components/site/Navbar";
 import { useNavigate } from "react-router-dom";
+import Details from "./components/site/Details";
+import Products from "./components/site/Products";
+import MasterLayout from "./components/site/MasterLayout";
 const App = () => {
   const navigate=useNavigate();
 
@@ -59,18 +62,31 @@ const App = () => {
       Application Page
       <Navbar />
 
-      <button onClick={()=>{navigate("/contact")}} >Contact</button>
+      <button onClick={()=>{
+        //let x="adasd";
+        navigate("/contact/",{state:{name:"ABC",age:20}});
+
+
+        }} >Contact</button>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/demo" element={<div>Demo Page</div>} />
-        <Route path="/products/">
+        <Route path="/details/:city" element={<Details/>} />
+        {/* <Route path="/products/">
           <Route path="electronics" element={<div>Electronics page</div>} />
           <Route path="mobiles" element={<div>Mobile page</div>} />
           <Route path="clothes" element={<div>Clothes page</div>} />
-        </Route>
+        </Route> */}
+        {/* <Route path="/products/:category" element={<Products/>}/> */}
+<Route path="/products/" element={<div>New Parent<Outlet/></div>}>
+          <Route path="electronics" element={<div>Electronics page</div>} />
+          <Route path="mobiles" element={<div>Mobile page</div>} />
+          <Route path="clothes" element={<div>Clothes page</div>} />
+        </Route> 
+
 
       </Routes>
     </>
