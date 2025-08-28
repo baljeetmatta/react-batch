@@ -15,6 +15,9 @@
 
 import ClassTimer from "./components/ClassTimer";
 import Ctimer from "./components/Ctimer"
+import FetchProducts from "./components/FetchProducts";
+import Posts from "./components/Posts";
+import Requests from "./components/Requests";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -188,7 +191,7 @@ import Ctimer from "./components/Ctimer"
 const App=()=>{
   return (
     <>
-    <ClassTimer/>
+    <Requests/>
     </>
   )
 }

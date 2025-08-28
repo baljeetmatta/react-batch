@@ -1,9 +1,16 @@
 [ 
     {
     "name":"Product1",
+    "id":1,
     "price":200
 },{
     "name":"Product2",
-    "price":300
+    "price":300,
+    "id":2
+}
+,{
+    "name":"Product2",
+    "price":300,
+    "id":3
 }
 ]
