@@ -13,11 +13,15 @@
 // // // // import Forms from './components/Forms'
 // // // // function App() {
 
+import { Route, Routes } from "react-router-dom";
 import ClassTimer from "./components/ClassTimer";
 import Ctimer from "./components/Ctimer"
 import FetchProducts from "./components/FetchProducts";
+import Login from "./components/Login";
 import Posts from "./components/Posts";
 import Requests from "./components/Requests";
+import Dashboard from "./components/Dashboard";
+import UserDashboard from "./components/UserDashboard";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -191,7 +195,11 @@ import Requests from "./components/Requests";
 const App=()=>{
   return (
     <>
-    <Requests/>
+   <Routes>
+    <Route path="/" element={<UserDashboard/>}></Route>
+     <Route path="/dashboard" element={<Dashboard/>}></Route>
+    
+   </Routes>
     </>
   )
 }
